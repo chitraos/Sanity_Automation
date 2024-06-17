@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+target/*
+test-classes/*
+Results/*
+=======
+/target/
+/test-classes/
+>>>>>>> branch 'master' of https://lt-devtool.visualstudio.com/Self_Service/_git/Latest_Motor_UI_Automation

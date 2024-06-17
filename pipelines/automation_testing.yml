@@ -1,0 +1,65 @@
+parameters:
+  testSuite: ''
+
+jobs:
+- job: Full_test_suite
+  displayName: 'Full test suite'
+  timeoutInMinutes: 0
+
+  steps:
+    - script: |
+        CHROME_DRIVER_VERSION="120.0.6099.109"
+        CHROME_DRIVER_URL="https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/$CHROME_DRIVER_VERSION/linux64/chromedriver-linux64.zip"
+
+        # Download and unzip chromedriver
+        wget -O $(System.DefaultWorkingDirectory)/chromedriver.zip $CHROME_DRIVER_URL
+        unzip $(System.DefaultWorkingDirectory)/chromedriver.zip -d $(System.DefaultWorkingDirectory)
+        chmod +x $(System.DefaultWorkingDirectory)/chromedriver-linux64/chromedriver
+
+        # Move the chromedriver executable to a location in the PATH
+        sudo mv $(System.DefaultWorkingDirectory)/chromedriver-linux64/chromedriver /usr/local/bin/
+
+        # Verify the installation by checking the version
+        chromedriver --version
+
+      displayName: 'Download and use ChromeDriver'
+
+    - bash: |
+        sudo locale-gen fi_FI.UTF-8
+        sudo locale-gen fi_FI
+        export LANG="fi_FI"
+
+        wget https://google.com
+        wget https://sit2aksasiointi.lahitapiola.fi/
+
+      workingDirectory: $(System.DefaultWorkingDirectory)
+      displayName: Debug step      
+      continueOnError: true
+
+    - bash: |
+        pwd
+        ls
+        `which java`
+        `java -version`
+        `javac -version`
+      workingDirectory: $(System.DefaultWorkingDirectory)
+      displayName: List Contents of Dir
+
+    - bash: |
+        sudo locale-gen fi_FI.UTF-8
+        sudo locale-gen fi_FI
+        export LANG="fi_FI"
+
+        # Use xvfb to run Maven package with tests
+        xvfb-run --server-args=":99 -screen 0 1366x768x24" mvn package
+
+      workingDirectory: $(System.DefaultWorkingDirectory)
+      displayName: Run Tests
+      continueOnError: true
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/Results/Regression'
+        artifact: 'Automation_Test_Results'
+        publishLocation: 'pipeline'
+      displayName: Publish Results to Pipeline

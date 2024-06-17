@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QA_Web_Sanity" parallel="classes" thread-count="4">
+  <test name="QA_Web_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.QA_Web_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  <test name="QA_SSRS_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.QA_SSRS_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  <test name="QA_Web_UAT">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.QA_Web_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+    <test name="UAM_UAT">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.UAM_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="InQ_Research_UAT">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.InQ_Research_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="Income_Calculator_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Income_Calculator_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="Income_Calculator_UAT">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Income_Calculator_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="FCCMS_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.FCCMS_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="Vision_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Vision_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+   
+   <test name="Vision_QA">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Vision_QA" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="BatchProcessor_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.BatchProcessor_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="Investorrulesmanager_DEV">
+  	<parameter name="browser" value="chrome" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Investorrulesmanager_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="DMS_UAT">
+  	<parameter name="browser" value="edge" />
+  	 <classes>
+	      <class name="testscripts.scenario1.DMS_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="DDS_DEV">
+  	<parameter name="browser" value="edge" />
+  	 <classes>
+	      <class name="testscripts.scenario1.DDS_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+    <test name="EAGLE_DEV">
+  	<parameter name="browser" value="edge" />
+  	 <classes>
+	      <class name="testscripts.scenario1.EAGLE_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="EAGLE_UAT">
+  	<parameter name="browser" value="edge" />
+  	 <classes>
+	      <class name="testscripts.scenario1.EAGLE_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="Tmonitor_DEV">
+  	<parameter name="browser" value="edge" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Tmonitor_DEV" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+  
+  <test name="Tmonitor_UAT">
+  	<parameter name="browser" value="edge" />
+  	 <classes>
+	      <class name="testscripts.scenario1.Tmonitor_UAT" />
+	    </classes>
+   <!--  <packages>
+      <package name="testscripts.scenario1"/>
+      	
+    </packages> -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+	

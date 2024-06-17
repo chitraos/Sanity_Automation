@@ -1,0 +1,23 @@
+pr: none
+
+trigger: none
+
+pool:
+  name: 'Linux'
+    
+resources:
+  repositories: 
+    - repository: Latest_Motor_UI_Automation
+      type: git
+      name: Self_Service/Latest_Motor_UI_Automation
+      ref: Reporting_Update
+
+stages:
+
+  - stage: Run_Automation_Suite
+    displayName: Run Automation Suite
+    jobs:
+    
+    - template: automation_testing.yml
+      parameters:
+        repositoryName: 'self'
